@@ -1,0 +1,43 @@
+@use 'variables';
+
+#contact {
+
+    &__a {
+        margin-top: 2rem;
+
+        &__form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto auto auto;
+            gap: 1rem;
+
+            input {
+                padding: 0.5rem;
+            }
+
+            textarea {
+                grid-column: span 2;
+                height: 10rem;
+                padding: 0.5rem;
+            }
+
+            a {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    &__b {  
+        color: #fff;
+        margin-top: 2rem;
+        
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 4.2rem;
+            justify-items: center;
+            text-align: center;
+        }
+    }
+}
+

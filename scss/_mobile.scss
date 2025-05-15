@@ -1,0 +1,161 @@
+@use 'variables';
+
+//  tablet
+@media(max-width: 768px) {
+    #header {
+        &__home {
+            height: 70vh;
+            .header-content {
+                padding-top: 7rem;
+
+                h1 {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    }
+
+    #home__a .skills,
+    #home__b .profile,
+    #home__c .process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #main-footer {
+        height: 7rem;
+        .footer-content {
+            flex-direction: column;
+            padding: 1rem;
+
+            .social {
+                padding-top: .6rem;
+            }       
+        }
+    }
+
+     #about {
+        &-c {
+            .about-logos {
+                grid-template-columns: repeat(2, 1fr);
+                justify-items: center;
+            }
+        }
+    }
+
+    #projects {
+        .items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+}
+
+// mobile
+@media(max-width: 576px) {
+    #header {
+        &__home {
+            height: 60vh;
+            border-radius: 2px solid variables.$primary-color;
+            background-position: 20% 30%;
+        }
+
+        &__inner {
+            height: 10rem;
+        }
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        
+        li {
+            padding: 1rem;
+        }
+    }
+
+    #home__a .skills div {
+        border-bottom: 1px variables.$dark-color solid;
+        padding-bottom: 1rem;
+
+        &:last-child {
+            border: none;
+            padding-bottom: 0;
+        }
+    }
+
+    #home__a .skills,
+    #home__b .profile,
+    #home__c .process {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #main-footer {
+        height: 7rem;
+        .footer-content {
+            flex-direction: column;
+            padding: 1rem;
+
+            .social {
+                padding-top: 1rem;
+            }       
+        }
+    }
+
+    #about {
+        &-a {
+            .info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-c {
+            .about-logos {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+        }
+    }
+
+    #projects {
+        .items {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    #contact {
+        &__a {
+            &__form {
+                input {
+                    grid-column: span 2;
+                }  
+            }
+        }
+
+        &__b {
+            &__items {
+                grid-template-columns: 1fr;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            .contact__b__item {
+                width: 100%;
+                margin-top: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px dashed #fff;
+            }
+        }
+    }
+
+
+
+    
+
+
+
+    
+
+}
